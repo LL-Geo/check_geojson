@@ -24,7 +24,7 @@ jobs:
           pip install geopandas
 
       - name: Run shapefile comparison script
-        run: python compare_shapefiles.py https://github.com/LL-Geo/check_geojson/blob/main/re.geojson https://github.com/LL-Geo/check_geojson/blob/main/re.geojson
+        run: python compare_shapefiles.py https://github.com/LL-Geo/AntarcticBasins/blob/main/DistroPackage/AntarcticBasins_v1.04.shp https://github.com/LL-Geo/AntarcticBasins/blob/main/DistroPackage/AntarcticBasins_v1.04.shp
 
       - name: Post difference as comment
         run: |

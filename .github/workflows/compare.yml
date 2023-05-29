@@ -31,8 +31,5 @@ jobs:
           DIFFERENCE=$(cat difference.txt)
           PAYLOAD=$(echo '{}' | jq --arg body "$DIFFERENCE" '.body = $body')
           COMMENTS_URL=$(jq -r .pull_request.comments_url "$GITHUB_EVENT_PATH")
-<<<<<<< Updated upstream
-          curl -s -S -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" --header "Content-Type: application/json" --data "$PAYLOAD" "$COMMENTS_URL"
-=======
           curl -s -S -H "Authorization: token ${{ secrets.PAT }}" --header "Content-Type: application/json" --data "$PAYLOAD" "$COMMENTS_URL"
->>>>>>> Stashed changes
+
